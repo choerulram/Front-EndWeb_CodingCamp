@@ -54,7 +54,7 @@ function displayBooks(books = null) {
         bookItem.querySelector('[data-testid="bookItemIsCompleteButton"]').addEventListener('click', () => {
             book.isComplete = !book.isComplete;
             saveBooks(books);
-            displayBooks(); // Tampilkan semua buku setelah mengubah status
+            displayBooks();
         });
 
         // event listener tombol delete
@@ -130,7 +130,7 @@ searchForm.addEventListener('submit', (event) => {
     const searchQuery = searchInput.value.toLowerCase();
     const books = getBooks();
     const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchQuery));
-    displayBooks(filteredBooks); // Tampilkan hasil pencarian
+    displayBooks(filteredBooks);
 });
 
 // event listener untuk menutup modal

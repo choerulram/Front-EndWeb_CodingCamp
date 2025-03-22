@@ -3,18 +3,29 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf App</title>
+    <title>Bookshelf App - Achmad Choerul Ramdhani</title>
 
-    <!-- Impor script kamu di sini -->
-    <!-- Lampirkan `defer` jika pemanggilan dilakukan dalam <head> -->
-    <script defer src="main.js"></script>
+    <!-- title icon -->
+    <!-- <link rel="icon" href="assets/img/book_logo.png" type="image/png"> -->
+    <link rel="icon" href="assets/img/book_icon.ico" type="image/icon type">
+
+    <!-- import css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- import script -->
+    <script defer src="assets/js/main.js"></script>
   </head>
   <body>
+    <!-- start header -->
     <header>
       <h1>Bookshelf App</h1>
     </header>
+    <!-- end header -->
+     <img src="assets/img/book_logo.png" alt="">
 
+    <!-- start main -->
     <main>
+      <!-- start form tambah buku -->
       <section>
         <h2>Tambah Buku Baru</h2>
         <form id="bookForm" data-testid="bookForm">
@@ -43,7 +54,9 @@
           </button>
         </form>
       </section>
+      <!-- end form tambah buku -->
 
+      <!-- start cari buku -->
       <section>
         <h2>Cari Buku</h2>
         <form id="searchBook" data-testid="searchBookForm">
@@ -54,7 +67,9 @@
           </button>
         </form>
       </section>
+      <!-- end cari buku -->
 
+      <!-- start list buku belum selesai dibaca -->
       <section>
         <h2>Belum selesai dibaca</h2>
 
@@ -75,7 +90,9 @@
           </div>
         </div>
       </section>
+      <!-- end list buku belum selesai dibaca -->
 
+      <!-- start list bulu selesai dibaca -->
       <section>
         <h2>Selesai dibaca</h2>
 
@@ -96,6 +113,8 @@
           </div>
         </div>
       </section>
+      <!-- end list bulu selesai dibaca -->
     </main>
+    <!-- end main -->
   </body>
 </html>

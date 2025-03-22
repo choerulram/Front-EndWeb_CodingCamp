@@ -86,36 +86,6 @@
               <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
             </div>
           </div>
-          <div class="card" data-bookid="123123123" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div class="button_book_shelf">
-              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
-              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
-            </div>
-          </div>
-          <div class="card" data-bookid="123123123" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 3</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div class="button_book_shelf">
-              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
-              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
-            </div>
-          </div>
-          <div class="card" data-bookid="123123123" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 3</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div class="button_book_shelf">
-              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
-              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
-            </div>
-          </div>
         </div>
       </section>
       <!-- end list buku belum selesai dibaca -->
@@ -139,19 +109,39 @@
               <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
             </div>
           </div>
-          <div class="card" data-bookid="456456456" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 4</h3>
-            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
-            <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div class="button_book_shelf">
-              <button class="undone" data-testid="bookItemIsCompleteButton">Belum Selesai Dibaca</button>
-              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
-            </div>
-          </div>
         </div>
       </section>
       <!-- end list bulu selesai dibaca -->
+
+      <!-- start modal edit buku -->
+      <div id="editBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Edit Buku</h2>
+            <form id="editBookForm" data-testid="editBookForm">
+                <div class="input">
+                    <label for="editBookFormTitle">Judul</label>
+                    <input id="editBookFormTitle" type="text" required data-testid="editBookFormTitleInput" placeholder="Tuliskan judul ..." />
+                </div>
+                <div class="input">
+                    <label for="editBookFormAuthor">Penulis</label>
+                    <input id="editBookFormAuthor" type="text" required data-testid="editBookFormAuthorInput" placeholder="Tuliskan penulis ..." />
+                </div>
+                <div class="input">
+                    <label for="editBookFormYear">Tahun</label>
+                    <input id="editBookFormYear" type="number" required data-testid="editBookFormYearInput" placeholder="Tuliskan tahun terbit ..." />
+                </div>
+                <div class="input_checkbox">
+                    <label for="editBookFormIsComplete">Selesai dibaca</label>
+                    <input id="editBookFormIsComplete" type="checkbox" data-testid="editBookFormIsCompleteCheckbox" />
+                </div>
+                <button class="submit_book" id="editBookFormSubmit" type="submit" data-testid="editBookFormSubmitButton">
+                    Simpan Perubahan
+                </button>
+            </form>
+        </div>
+      </div>
+      <!-- end modal edit buku -->
     </main>
     <!-- end main -->
 

@@ -11,9 +11,6 @@
 
     <!-- import css -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- import script -->
-    <script defer src="assets/js/main.js"></script>
   </head>
   <body>
     <!-- start header -->
@@ -21,7 +18,6 @@
       <h1>Bookshelf App</h1>
     </header>
     <!-- end header -->
-     <img src="assets/img/book_logo.png" alt="">
 
     <!-- start main -->
     <main>
@@ -29,19 +25,19 @@
       <section>
         <h2>Tambah Buku Baru</h2>
         <form id="bookForm" data-testid="bookForm">
-          <div>
+          <div class="input">
             <label for="bookFormTitle">Judul</label>
-            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" placeholder="Tuliskan judul ..." />
           </div>
-          <div>
+          <div class="input">
             <label for="bookFormAuthor">Penulis</label>
-            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" placeholder="Tuliskan penulis ..."/>
           </div>
-          <div>
+          <div class="input">
             <label for="bookFormYear">Tahun</label>
-            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" placeholder="Tuliskan tahun terbit ..."/>
           </div>
-          <div>
+          <div class="input_checkbox">
             <label for="bookFormIsComplete">Selesai dibaca</label>
             <input
               id="bookFormIsComplete"
@@ -49,7 +45,7 @@
               data-testid="bookFormIsCompleteCheckbox"
             />
           </div>
-          <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+          <button class="submit_book" id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
             Masukkan Buku ke rak <span>Belum selesai dibaca</span>
           </button>
         </form>
@@ -60,32 +56,64 @@
       <section>
         <h2>Cari Buku</h2>
         <form id="searchBook" data-testid="searchBookForm">
-          <label for="searchBookTitle">Judul</label>
-          <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
-          <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
-            Cari
-          </button>
+          <label class="label_search" for="searchBookTitle">Judul</label>
+          <div class="search">
+            <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="Cari berdasarkan judul ..."/>
+            <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+              Cari
+            </button>
+          </div>
         </form>
       </section>
       <!-- end cari buku -->
 
       <!-- start list buku belum selesai dibaca -->
-      <section>
-        <h2>Belum selesai dibaca</h2>
+      <section class="book_shelf">
+        <h2>Belum Selesai Dibaca</h2>
 
-        <div id="incompleteBookList" data-testid="incompleteBookList">
+        <div class="book_list" id="incompleteBookList" data-testid="incompleteBookList">
           <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
             Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
           -->
-          <div data-bookid="123123123" data-testid="bookItem">
+          <div class="card" data-bookid="123123123" data-testid="bookItem">
             <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
             <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
             <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-              <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button data-testid="bookItemEditButton">Edit Buku</button>
+            <div class="button_book_shelf">
+              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
+            </div>
+          </div>
+          <div class="card" data-bookid="123123123" data-testid="bookItem">
+            <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
+            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+            <p data-testid="bookItemYear">Tahun: 2030</p>
+            <div class="button_book_shelf">
+              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
+            </div>
+          </div>
+          <div class="card" data-bookid="123123123" data-testid="bookItem">
+            <h3 data-testid="bookItemTitle">Judul Buku 3</h3>
+            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+            <p data-testid="bookItemYear">Tahun: 2030</p>
+            <div class="button_book_shelf">
+              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
+            </div>
+          </div>
+          <div class="card" data-bookid="123123123" data-testid="bookItem">
+            <h3 data-testid="bookItemTitle">Judul Buku 3</h3>
+            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+            <p data-testid="bookItemYear">Tahun: 2030</p>
+            <div class="button_book_shelf">
+              <button class="done" data-testid="bookItemIsCompleteButton">Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
             </div>
           </div>
         </div>
@@ -93,22 +121,32 @@
       <!-- end list buku belum selesai dibaca -->
 
       <!-- start list bulu selesai dibaca -->
-      <section>
-        <h2>Selesai dibaca</h2>
+      <section class="book_shelf">
+        <h2>Selesai Dibaca</h2>
 
-        <div id="completeBookList" data-testid="completeBookList">
+        <div class="book_list" id="completeBookList" data-testid="completeBookList">
           <!-- 
             Ini adalah struktur HTML untuk masing-masing buku.
             Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
           -->
-          <div data-bookid="456456456" data-testid="bookItem">
-            <h3 data-testid="bookItemTitle">Judul Buku 2</h3>
+          <div class="card" data-bookid="456456456" data-testid="bookItem">
+            <h3 data-testid="bookItemTitle">Judul Buku 4</h3>
             <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
             <p data-testid="bookItemYear">Tahun: 2030</p>
-            <div>
-              <button data-testid="bookItemIsCompleteButton">Selesai dibaca</button>
-              <button data-testid="bookItemDeleteButton">Hapus Buku</button>
-              <button data-testid="bookItemEditButton">Edit Buku</button>
+            <div class="button_book_shelf">
+              <button class="undone" data-testid="bookItemIsCompleteButton">Belum Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
+            </div>
+          </div>
+          <div class="card" data-bookid="456456456" data-testid="bookItem">
+            <h3 data-testid="bookItemTitle">Judul Buku 4</h3>
+            <p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
+            <p data-testid="bookItemYear">Tahun: 2030</p>
+            <div class="button_book_shelf">
+              <button class="undone" data-testid="bookItemIsCompleteButton">Belum Selesai Dibaca</button>
+              <button class="delete" data-testid="bookItemDeleteButton">Hapus Buku</button>
+              <button class="edit" data-testid="bookItemEditButton">Edit Buku</button>
             </div>
           </div>
         </div>
@@ -116,5 +154,8 @@
       <!-- end list bulu selesai dibaca -->
     </main>
     <!-- end main -->
+
+    <!-- import script -->
+    <script defer src="assets/js/main.js"></script>
   </body>
 </html>
